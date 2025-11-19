@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menem te amo</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <nav>
+        <button onclick="crear()">CREAR</button>
+        <button onclick="listar()">LISTAR</button>
+        <button onclick="buscar()">BUSCAR</button>
+    </nav>
+    <main>
+        <div id="crear" style="display: none;">
+            <h2>Cargar estudiante</h2>
+            <form>
+                <label>Nombre:</label>
+                <input type="text" id="nombre">
+                <label>Apellido:</label>
+                <input type="text" id="apellido">
+                <label>Curso:</label>
+                <input type="text" id="curso">
+                <label>Nota 1:</label>
+                <input type="number" id="n1">
+                <label>Nota 2:</label>
+                <input type="number" id="n2">
+                <label>Nota 3:</label>
+                <input type="number" id="n3">
+            </form>
+            <button onclick="enviar()">Enviar</button>
+        </div>
+
+        <div id="listar" style="display: none;">
+            <h2>Estudiantes cargados</h2>
+            <button onclick="todo()">Todo</button>
+            <button onclick="activarcurso()">Por curso</button>
+            <div id="mTodo"></div>
+            <div id="moCurso" style="display: none;">
+                <label>Curso:</label>
+                <input type="text" id="curso2">
+                <button onclick="mostrarCurso()">Buscar</button>
+                <div id="mmCurso"></div>
+            </div>
+            <div id="listado1"></div>
+        </div>
+
+        <div id="buscar" style="display: none;">
+            <h2>Buscar estudiante</h2>
+            <label>Nombre:</label>
+            <input type="text" id="buscarNombre">
+            <button onclick="buscarEstudiante()">Buscar por nombre</button>
+            <br><br>
+            <label>Promedio:</label>
+            <input type="number" id="promBuscar">
+            <button onclick="buscarPorPromedio()">Buscar por promedio</button>
+            <br><br>
+            <button onclick="mostrarMejorPromedio()">Mostrar mejor promedio</button>
+            <button onclick="mostrarPromedioGeneral()">Mostrar promedio general</button>
+            <div id="resultadodeBusqueda"></div>
+        </div>
+    </main>
+    <script src="script (1).js"></script>
+</body>
+</html>
